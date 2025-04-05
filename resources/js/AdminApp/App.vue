@@ -1,10 +1,9 @@
-<script setup>
-import UpgradeToPro from '@/components/UpgradeToPro.vue'
-</script>
-
 <template>
-  <VApp>
-    <RouterView />
-    <UpgradeToPro />
-  </VApp>
+    <router-view></router-view>
 </template>
+
+<script>
+export default {
+    name: 'AdminApp'
+}
+</script>

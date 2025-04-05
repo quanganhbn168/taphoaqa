@@ -1,18 +1,7 @@
-import { createApp } from 'vue'
-import App from '@/AdminApp/App.vue'
-import { registerPlugins } from '@core/utils/plugins'
+import { createApp } from 'vue';
+import AdminApp from './App.vue';
+import router from './router/index.js'; 
 
-// Styles
-import '@core/scss/template/index.scss'
-import '@layouts/styles/index.scss'
-import '@styles/styles.scss'
-
-// Create vue app
-const app = createApp(App)
-
-
-// Register plugins
-registerPlugins(app)
-
-// Mount vue app
-app.mount('#app')
+const app = createApp(AdminApp);
+app.use(router);
+app.mount('#admin-app');
